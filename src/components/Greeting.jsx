@@ -25,7 +25,7 @@ function Greeting() {
 
   return (
     <>
-      <h1>
+      <h1 className="greeting">
         {image && <img src={image} alt={greeting} />}
         {greeting}
       </h1>
