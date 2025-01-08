@@ -1,16 +1,12 @@
-import Greeting from './components/Greeting';
-import SocialLinks from './components/SocialLinks';
+import Header from "./components/Header";
 
-function App() {
+export default function App() {
   return (
     <>
       {/* <div className="app">Hello Atlas</div> */}
 
       {/* Render Components */}
-      <Greeting />
-      <SocialLinks/>
+      <Header/>
     </>
   );
 }
-
-export default App;
