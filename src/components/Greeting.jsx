@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
-import "../index.css";
+import dayImage from "../assets/day.svg";
+import eveningImage from "../assets/evening.svg";
+import nightImage from "../assets/night.svg";
 
 function Greeting() {
   const [greeting, setGreeting] = useState("");
@@ -8,18 +10,18 @@ function Greeting() {
   useEffect(() => {
     const time = new Date().getHours();
 
-    if (time >= 6 && time <= 11.59) {
+    if (time >= 6 && time < 12) {
       setGreeting("Good Morning!");
-      setImage("src/assets/day.svg");
-    } else if (time >= 12 && time <= 16.59) {
+      setImage(dayImage);
+    } else if (time >= 12 && time < 17) {
       setGreeting("Good Afternoon!");
-      setImage("src/assets/day.svg");
-    } else if (time >= 17 && time <= 20.59) {
+      setImage(dayImage);
+    } else if (time >= 17 && time < 21) {
       setGreeting("Good Evening!");
-      setImage("src/assets/evening.svg");
+      setImage(eveningImage);
     } else {
       setGreeting("Good Night!");
-      setImage("src/assets/night.svg");
+      setImage(nightImage);
     }
   }, []);
 
