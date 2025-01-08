@@ -8,12 +8,14 @@ export default function SocialLinks() {
         <a
           href="https://github.com/Frandy4ever/atlas-react-and-jsx/tree/main/src"
           target="_blank"
-        >
+          rel="noopener noreferrer"
+          >
           <img src={linkedInIcon} alt="" />
         </a>
         <a
           href="https://github.com/Frandy4ever/atlas-react-and-jsx/tree/main/src"
           target="_blank"
+          rel="noopener noreferrer"
         >
           <img src={githubIcon} alt="" />
         </a>
