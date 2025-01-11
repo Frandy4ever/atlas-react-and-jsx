@@ -1,12 +1,15 @@
+import AboutMe from "./components/AboutMe";
 import Header from "./components/Header";
 import HelpfulResource from "./components/HelpfulResource";
 import Section from "./components/Section";
 
-
 export default function App() {
-  const reactWithFreeCodeCamp = "https://www.youtube.com/watch?v=x4rFhThSX04&t=99s";
-  const codeWithMosh = "https://members.codewithmosh.com/courses/enrolled/2037633";
-  const geeksforgeeks = "https://www.geeksforgeeks.org/reactjs-introduction/?ref=roadmap";
+  const reactWithFreeCodeCamp =
+    "https://www.youtube.com/watch?v=x4rFhThSX04&t=99s";
+  const codeWithMosh =
+    "https://members.codewithmosh.com/courses/enrolled/2037633";
+  const geeksforgeeks =
+    "https://www.geeksforgeeks.org/reactjs-introduction/?ref=roadmap";
   return (
     <>
       {/* <div className="app">Hello Atlas</div> */}
@@ -14,13 +17,14 @@ export default function App() {
       {/* Render Components */}
       <Header />
       <div className="app">
-
         {/* Section 1: What is React? */}
         <Section title="What is React?">
-          <p>React is a JavaScript library for building user interfaces (<abbr title="User interfaces">UIs</abbr>).
-            It allows developers to create reusable UI components, manage the state of
-            applications efficiently, and update the DOM dynamically without
-            reloading the entire page each time. React is maintained by Meta (formerly
+          <p>
+            React is a JavaScript library for building user interfaces (
+            <abbr title="User interfaces">UIs</abbr>). It allows developers to
+            create reusable UI components, manage the state of applications
+            efficiently, and update the DOM dynamically without reloading the
+            entire page each time. React is maintained by Meta (formerly
             Facebook) and a community of developers.
           </p>
         </Section>
@@ -28,10 +32,19 @@ export default function App() {
         {/* Section 2: Benefits of React  */}
         <Section title="Benefits of React">
           <ul>
-            <li>Reusable components enhance code reusability and maintainability.</li>
-            <li>Efficient rendering using the Virtual DOM improves perfermance.</li>
-            <li>Flexibility in integrating with other libraries and frameworks.</li>
-            <li>Large ecosystem and community support with many libraries and tools.</li>
+            <li>
+              Reusable components enhance code reusability and maintainability.
+            </li>
+            <li>
+              Efficient rendering using the Virtual DOM improves perfermance.
+            </li>
+            <li>
+              Flexibility in integrating with other libraries and frameworks.
+            </li>
+            <li>
+              Large ecosystem and community support with many libraries and
+              tools.
+            </li>
             <li>Easy to learn for developers familiar with JavaScript.</li>
           </ul>
         </Section>
@@ -50,6 +63,11 @@ export default function App() {
             label="ReactJs with Geeks for Geeks"
             link={geeksforgeeks}
           />
+        </Section>
+
+        {/* Section 4: About Me  */}
+        <Section title="About Me">
+          <AboutMe />
         </Section>
       </div>
     </>
