@@ -2,6 +2,7 @@ import AboutMe from "./components/AboutMe";
 import Header from "./components/Header";
 import HelpfulResource from "./components/HelpfulResource";
 import Section from "./components/Section";
+import Footer from "./components/Footer";
 
 export default function App() {
   const reactWithFreeCodeCamp =
@@ -10,6 +11,7 @@ export default function App() {
     "https://members.codewithmosh.com/courses/enrolled/2037633";
   const geeksforgeeks =
     "https://www.geeksforgeeks.org/reactjs-introduction/?ref=roadmap";
+  const react_dev_org = "https://react.dev/reference/react";
   return (
     <>
       {/* <div className="app">Hello Atlas</div> */}
@@ -63,12 +65,14 @@ export default function App() {
             label="ReactJs with Geeks for Geeks"
             link={geeksforgeeks}
           />
+          <HelpfulResource label="React Dev Ref" link={react_dev_org} />
         </Section>
 
-        {/* Section 4: About Me  */}
-        <Section title="About Me">
-          <AboutMe />
-        </Section>
+        {/*  About Me  */}
+        <AboutMe />
+
+        {/* Footer  */}
+        <Footer />
       </div>
     </>
   );
