@@ -19,7 +19,12 @@
   color: var(--offwhite);
 }
 
-.app, .App {
+abbr {
+  text-decoration: none;
+}
+
+.app,
+.App {
   max-width: 1000px;
   margin: 0 auto;
   padding: 1rem 1rem;
@@ -37,7 +42,7 @@ nav {
 }
 
 .greeting img {
-  width: 50px;
+  width: 30px;
 }
 
 .social-links a {
