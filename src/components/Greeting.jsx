@@ -1,34 +1,40 @@
 import { useEffect, useState } from "react";
-import dayImage from "../assets/day.svg";
-import eveningImage from "../assets/evening.svg";
-import nightImage from "../assets/night.svg";
+import morningImage from "../assets/morning.svg";
+import afternoonImage from "../assets/afternoon.svg";
+import eveningImage from "../assets/eveningly.svg";
+import nightImage from "../assets/nighty.svg";
 
 function Greeting() {
+  const [currentTime, setCurrentTime] = useState(new Date());
   const [greeting, setGreeting] = useState("");
   const [image, setImage] = useState("");
 
   useEffect(() => {
-    const time = new Date().getHours();
-
-    if (time >= 6 && time < 12) {
-      setGreeting("Good Morning!");
-      setImage(dayImage);
-    } else if (time >= 12 && time < 17) {
-      setGreeting("Good Afternoon!");
-      setImage(dayImage);
-    } else if (time >= 17 && time < 21) {
-      setGreeting("Good Evening!");
-      setImage(eveningImage);
-    } else {
-      setGreeting("Good Night!");
-      setImage(nightImage);
+    function getTimeOfDayDetails(time) {
+      return time >= 6 && time < 12
+        ? { greeting: "Good Morning", imageSrc: morningImage }
+        : time >= 12 && time < 17
+        ? { greeting: "Good Afternoon", imageSrc: afternoonImage }
+        : time >= 17 && time < 21
+        ? { greeting: "Good Evening", imageSrc: eveningImage }
+        : { greeting: "Good Night", imageSrc: nightImage };
     }
-  }, []);
+
+    const { greeting, imageSrc } = getTimeOfDayDetails(currentTime.getHours());
+    setGreeting(greeting);
+    setImage(imageSrc);
+
+    const intervalId = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+
+    return clearInterval(intervalId);
+  }, [currentTime]);
 
   return (
     <>
       <h1 className="greeting">
-        {image && <img src={image} alt={greeting} />}
+        {image && <img src={image} alt={`${greeting} image`} />}
         {greeting}
       </h1>
     </>
