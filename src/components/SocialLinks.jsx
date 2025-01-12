@@ -6,7 +6,7 @@ export default function SocialLinks() {
     <>
       <div className="social-links">
         <a
-          href="https://github.com/Frandy4ever/atlas-react-and-jsx/tree/main/src"
+          href="www.linkedin.com/in/frandyslueuewebdevitpro"
           target="_blank"
           rel="noopener noreferrer"
           >
