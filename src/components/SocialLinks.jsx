@@ -6,7 +6,7 @@ export default function SocialLinks() {
     <>
       <div className="social-links">
         <a
-          href="www.linkedin.com/in/frandyslueuewebdevitpro"
+          href="https://www.linkedin.com/in/frandyslueuewebdevitpro/"
           target="_blank"
           rel="noopener noreferrer"
           >
