@@ -35,7 +35,7 @@ function Greeting() {
     <>
       <h1 className="greeting">
         {image && <img src={image} alt={`${greeting} image`} />}
-        {greeting}
+        {greeting}!
       </h1>
     </>
   );
