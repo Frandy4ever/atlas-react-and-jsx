@@ -4,7 +4,7 @@ import afternoonImage from "../assets/afternoon.svg";
 import eveningImage from "../assets/eveningly.svg";
 import nightImage from "../assets/nighty.svg";
 
-function Greeting() {
+export default function Greeting() {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [greeting, setGreeting] = useState("");
   const [image, setImage] = useState("");
@@ -32,13 +32,9 @@ function Greeting() {
   }, [currentTime]);
 
   return (
-    <>
-      <h1 className="greeting">
-        {image && <img src={image} alt={`${greeting} image`} />}
-        {greeting}!
-      </h1>
-    </>
+    <h1 className="greeting">
+      {image && <img src={image} alt={`${greeting} image`} />}
+      {greeting}!
+    </h1>
   );
 }
-
-export default Greeting;

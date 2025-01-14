@@ -9,15 +9,17 @@ export default function SocialLinks() {
           href="https://www.linkedin.com/in/frandyslueuewebdevitpro/"
           target="_blank"
           rel="noopener noreferrer"
-          >
-          <img src={linkedInIcon} alt="" />
+          aria-label="LinkedIn Profile"
+        >
+          <img src={linkedInIcon} alt="LinkedIn logo" />
         </a>
         <a
           href="https://github.com/Frandy4ever/atlas-react-and-jsx/tree/main/src"
           target="_blank"
           rel="noopener noreferrer"
+          aria-label="Github Profile"
         >
-          <img src={githubIcon} alt="" />
+          <img src={githubIcon} alt="Github logo" />
         </a>
       </div>
     </>

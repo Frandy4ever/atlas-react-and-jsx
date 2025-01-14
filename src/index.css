@@ -23,8 +23,7 @@ abbr {
   text-decoration: none;
 }
 
-.app,
-.App {
+.app, .App {
   max-width: 1000px;
   margin: 0 auto;
   padding: 1rem 1rem;
@@ -42,7 +41,7 @@ nav {
 }
 
 .greeting img {
-  width: 30px;
+  width: 50px;
 }
 
 .social-links a {
@@ -89,6 +88,7 @@ li {
   display: flex;
   align-items: center;
   padding-top: 1rem;
+  flex-wrap: wrap;
 }
 
 li:first-child {
